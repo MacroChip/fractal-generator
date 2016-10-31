@@ -8,10 +8,14 @@ import java.io.FileNotFoundException;
 
 class Convert {
     public static void main(String[] args) {
+	if (args.length != 1) {
+		System.out.println("Usage: Convert inputFile");
+		System.exit(1);
+	}
         BufferedImage img = new BufferedImage(300, 300, BufferedImage.TYPE_INT_RGB);
         Scanner pixels = null;
         try {
-             pixels = new Scanner(new File("pixels.txt"));
+             pixels = new Scanner(new File(args[0]));
         } catch (FileNotFoundException e) {
             e.printStackTrace();
         }
