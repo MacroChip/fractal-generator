@@ -8,11 +8,12 @@ import java.io.FileNotFoundException;
 
 class Convert {
     public static void main(String[] args) {
-	if (args.length != 1) {
-		System.out.println("Usage: Convert inputFile");
+	if (args.length != 2) {
+		System.out.println("Usage: Convert inputFile dimension");
 		System.exit(1);
 	}
-        BufferedImage img = new BufferedImage(300, 300, BufferedImage.TYPE_INT_RGB);
+	int dimension = Integer.parseInt(args[1]);
+        BufferedImage img = new BufferedImage(dimension, dimension, BufferedImage.TYPE_INT_RGB);
         Scanner pixels = null;
         try {
              pixels = new Scanner(new File(args[0]));
