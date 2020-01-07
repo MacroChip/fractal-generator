@@ -1,6 +1,6 @@
 This project generates a fractal png based on a julia set of numbers.
 
-To use this, you will need to have the boost libraries. julia.cc generates the text file that defines each pixel and convert.java converts the text file to a png.
+To use this, you will need to have the boost libraries (tested on version 1.62.0). julia.cc generates the text file that defines each pixel and convert.java converts the text file to a png.
 
 I don't fully remember the reasoning behind a lot of the choices I made in this project, but I do remember some. I had a hard time creating an image in c++ so I made a separate java program for that because I knew it was easy for me in Java. I did not know that there were nice ways of doing arg parsing so I made constants instead that have to be changed and recompiled every time. Change DIMENSION to be the height and width of your image, then change the same values in the java file. Change C_REAL AND C_IMAGINARY to get a different fractal.
 
